@@ -15,3 +15,5 @@ let area = Rect::new(0, 0, 100, 100);
 // Returns 9 Rects arranged in a 3x3 grid with 1 cell spacing.
 let cells = auto_grid(area, 9, 1);
 ```
+
+[ratatui]: https://ratatui.rs
