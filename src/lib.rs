@@ -34,13 +34,11 @@ pub fn auto_grid(area: Rect, n: usize, spacing: u16) -> Vec<Rect> {
     let cols = (n as f64).sqrt().ceil() as u16;
     let rows = ((n as f64) / f64::from(cols)).ceil() as u16;
 
-    let row_constraints: Vec<Constraint> = std::iter::repeat(Constraint::Ratio(1, rows.into()))
-        .take(rows as usize)
-        .collect();
+    let row_constraints: Vec<Constraint> =
+        std::iter::repeat_n(Constraint::Ratio(1, rows.into()), rows as usize).collect();
 
-    let col_constraints: Vec<Constraint> = std::iter::repeat(Constraint::Ratio(1, cols.into()))
-        .take(cols as usize)
-        .collect();
+    let col_constraints: Vec<Constraint> =
+        std::iter::repeat_n(Constraint::Ratio(1, cols.into()), cols as usize).collect();
 
     let row_areas = Layout::vertical(row_constraints)
         .spacing(spacing)

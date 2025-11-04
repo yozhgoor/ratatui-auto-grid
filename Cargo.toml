@@ -2,6 +2,15 @@
 name = "ratatui-auto-grid"
 version = "0.1.0"
 edition = "2024"
+license = "MIT or Apache-2.0"
+description = "Simple auto-grid layout utility for ratatui TUI applications"
+homepage = "https://github.com/yozhgoor/ratatui-auto-grid"
+repository = "https://github.com/yozhgoor/ratatui-auto-grid"
+documentation = "https://docs.rs/ratatui-auto-grid"
+readme = "README.md"
+categories = ["command-line-interface", "algorithms", "development-tools"]
+keywords = ["tui", "ratatui", "grid"]
+include = ["src/**/*.rs", "README.md", "LICENSE.Apache-2.0", "LICENSE.MIT"]
 
 [dependencies]
 ratatui = "0.29"
